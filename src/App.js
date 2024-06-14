@@ -16,15 +16,16 @@ import React from "react";
 
 
 function App() {
-  const [alert, setAlert] = useState(null)
-  const showAlert = (type, message) => {
-    setAlert({
-      type: type,
-      msg: message
-    })
-    setTimeout(() => {
-      setAlert(null)
-    }, 1500);
+  const [alert, setAlert] = useState(null);
+
+  const showAlert = (message, type)=>{
+      setAlert({
+        msg: message,
+        type: type
+      })
+      setTimeout(() => {
+          setAlert(null);
+      }, 1500);
   }
   const [mode, setMode] = useState('light')
   const toggleMode = () => {
@@ -32,12 +33,14 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor = '#0e101a'
       document.body.style.color = 'white'
+      showAlert("Dark mode has been enabled!", "success");
 
     }
     else if (mode === 'dark') {
       setMode('light')
       document.body.style.backgroundColor = 'white'
       document.body.style.color = 'black'
+      showAlert("Light mode has been enabled!", "success");
 
     }
     else {
@@ -48,7 +51,7 @@ function App() {
     <>
       <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} mode={mode} />
-      <TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces." mode={mode} showAlert={showAlert} />
+      <TextForm heading="Try TextUtils - Manipulate your Text in one Place." mode={mode} showAlert={showAlert} />
       {/* <About mode={mode}/> */}
       {/* <Router>
 <Navbar title="TextUtils2" about="About Us" mode={mode} toggleMode={toggleMode}/>

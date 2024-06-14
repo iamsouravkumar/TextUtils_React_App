@@ -6,7 +6,7 @@ export default function TextForm(props) {
     const upCase = () => {
         let newText = text.toUpperCase();
         setText(newText);
-        props.showAlert('Success, Converted to UpperCase');
+        props.showAlert("Converted to UpperCase!", "success");
     }
 
     const handleChange = (event) => {
@@ -17,7 +17,7 @@ export default function TextForm(props) {
     const loCase = () => {
         let newText = text.toLowerCase();
         setText(newText);
-        props.showAlert('Success, Converted to LowerCase');
+        props.showAlert("Converted to LowerCase!","success");
     }
 
     const clearText = () => {
@@ -28,18 +28,18 @@ export default function TextForm(props) {
 
     const copyText = () => {
         navigator.clipboard.writeText(text);
-        props.showAlert('Success, Text Copied Successfully');
+        props.showAlert("Text Copied Successfully!", "success");
     }
 
     const removeExtraSpaces = () => {
         let newText = text.split(/[  ]+/);
         setText(newText.join(" "));
-        props.showAlert('Success, Extra spaces removed successfully');
+        props.showAlert("Extra spaces removed successfully!", "success");
     }
     return (
         <>
             <div className='container my-7'>
-                <h2 className='mb-4'>{props.heading}</h2>
+                <h2 className='mb-4 h2'>{props.heading}</h2>
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleChange} style={{backgroundColor: props.mode==='light'?'white':'#333954', color: props.mode === 'light'?'black':'white'}} id="my-box" rows="8"></textarea>
                 </div>
@@ -50,10 +50,10 @@ export default function TextForm(props) {
                 <button disabled={text.length===0} className='btn btn-primary mx-1 my-1' onClick={removeExtraSpaces}>Remove Extra Spaces</button>
             </div>
             <div className='container my-3'>
-                <h2>Your text Summary</h2>
+                <h2 className='h2'>Your text Summary</h2>
                 <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
                 <p>{0.008 * text.split(" ").length} Minutes read</p>
-                <h2>Preview</h2>
+                <h2 className='h2'>Preview</h2>
                 <p>{text.length>0?text : "Nothing to Preview!"}</p>
             </div>
         </>
