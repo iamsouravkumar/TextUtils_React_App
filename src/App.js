@@ -49,9 +49,9 @@ function App() {
   }
   return (
     <>
-      <Navbar title="TextUtils" about="About" mode={mode} toggleMode={toggleMode} />
+      <Navbar title="Texter - Cut, Copy, Paste" about="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} mode={mode} />
-      <TextForm heading="Try TextUtils - Manipulate your Text in one Place." mode={mode} showAlert={showAlert} />
+      <TextForm heading="Try Texter - Manipulate your Text in one Place." mode={mode} showAlert={showAlert} />
       {/* <About mode={mode}/> */}
       {/* <Router>
 <Navbar title="TextUtils2" about="About Us" mode={mode} toggleMode={toggleMode}/>
