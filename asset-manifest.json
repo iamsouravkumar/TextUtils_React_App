@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/TextUtils_React_App/static/css/main.a03996ad.css",
-    "main.js": "/TextUtils_React_App/static/js/main.8ea9ae1c.js",
-    "static/js/453.ed3810f9.chunk.js": "/TextUtils_React_App/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/TextUtils_React_App/index.html",
-    "main.a03996ad.css.map": "/TextUtils_React_App/static/css/main.a03996ad.css.map",
-    "main.8ea9ae1c.js.map": "/TextUtils_React_App/static/js/main.8ea9ae1c.js.map",
-    "453.ed3810f9.chunk.js.map": "/TextUtils_React_App/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "/iamsouravkumar/texter_react_app/static/css/main.3a5034af.css",
+    "main.js": "/iamsouravkumar/texter_react_app/static/js/main.6c86cbed.js",
+    "index.html": "/iamsouravkumar/texter_react_app/index.html",
+    "main.3a5034af.css.map": "/iamsouravkumar/texter_react_app/static/css/main.3a5034af.css.map",
+    "main.6c86cbed.js.map": "/iamsouravkumar/texter_react_app/static/js/main.6c86cbed.js.map"
   },
   "entrypoints": [
-    "static/css/main.a03996ad.css",
-    "static/js/main.8ea9ae1c.js"
+    "static/css/main.3a5034af.css",
+    "static/js/main.6c86cbed.js"
   ]
 }
